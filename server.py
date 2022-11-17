@@ -14,7 +14,7 @@ pdf = pdf_tables_parse
 
 class App(BaseHTTPRequestHandler):
     def do_POST(self):
-        os.mkdir('./pdf_tables_parse/in/')
+        os.makedirs('./pdf_tables_parse/in/')
         content_len = int(self.headers.get('Content-Length'))
         post_body = self.rfile.read(content_len)
         with open('./pdf_tables_parse/in/temp.pdf', 'wb') as out:
