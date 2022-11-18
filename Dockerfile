@@ -1,7 +1,5 @@
-FROM ubuntu:22.04
+FROM python:3.9.15-slim-bullseye
 RUN apt update
-RUN apt install -y python3.10
-RUN apt install -y python3-pip
 RUN pip install opencv-python
 RUN apt install -y tesseract-ocr
 RUN apt install -y tesseract-ocr-rus
